@@ -17,6 +17,9 @@ const createDate = (data,num) => {
       arr.push(second);
     }
     return arr.sort().join("-").toString();
+  } else if (num > data.length || num < 0){
+      let pesan = "";
+      return pesan = "Tidak ada data";
   } else {
     let arr = [];
     let second = Math.floor(Date.parse(data[num])/1000);
